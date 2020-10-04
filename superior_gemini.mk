@@ -22,14 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit some common Superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit some common exthm stuff.
+$(call inherit-product, vendor/exthm/config/common_full_phone.mk)
 
 # Target Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := superior_gemini
+PRODUCT_NAME := exthm_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 5
@@ -45,7 +45,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := "Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V9.6.1.0.OAAMIFD:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
-
-# Maintainer SuperiorOS for Gemini
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.superior.maintainer=henmadx
